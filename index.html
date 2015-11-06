@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Shortcode-popups by gicolek</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Shortcode-popups</h1>
+        <h2>WordPress shortcode popups class, which simplifies popup creation.</h2>
+        <a href="https://github.com/gicolek/shortcode-popups" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a id="wordpress-shortcode-popups-generator" class="anchor" href="#wordpress-shortcode-popups-generator" aria-hidden="true"><span class="octicon octicon-link"></span></a>WordPress shortcode popups generator.</h3>
+
+<p>WordPress shortcode popups generator is a PHP class, which facilitates creation of WordPress dynamic popup windows. This should help the developers out in creation of a well thught user interface for a more complex shortcodes having several fields. Generally manual management of shortcodes is quite cumbersome, our class aims to sort that issue out.</p>
+
+<h3>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Usage</h3>
+
+<ol>
+<li>First instantiate the class</li>
+</ol>
+
+<p><code>$shortcodes = new WP_Doin_Shortcodes_Generator();</code></p>
+
+<ol>
+<li>Add a shortcode</li>
+</ol>
+
+<p><code>$test = $shortcodes-&gt;add_shortcode( 'acfrpw', 'ACFRPW', 'Choose from a list of settings to create the acfrpw shortocde. Any content (shortcodes as well) can be placed in the textareas.' );</code></p>
+
+<ol>
+<li>Add some fields</li>
+</ol>
+
+<p><code>$test-&gt;add_field( 'text', 'css', __( 'CSS Class', 'acf_rpw' ) );</code></p>
+
+<ol>
+<li>Generate the shortcode</li>
+</ol>
+
+<p><code>$shortcodes-&gt;generate();</code></p>
+
+<p>You'll end up with a popup window that would place the following shortcode for you:</p>
+
+<p><code>[acfrpw css="the text you specified"]</code></p>
+
+<h3>
+<a id="available-fields" class="anchor" href="#available-fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available fields</h3>
+
+<p>Currently there are 5 available fields to specify. The second argument of each add_field method needs to be different, as the values are stored as keys of the associative array. All of the fields take from 3 to 5 arguments, the first one denotes the type of the field used, the second one, a uniqe name of the field. The third one a heading of the element, which should describe the element, the fourth one a description, which describes the element in detail and the fift one, used for the select and checkbox fields is an array of key -&gt; value pair used for the values and names of select options and checkbox fields.</p>
+
+<ul>
+<li>Column field 
+The column field is used to divide the viewport to 1/3. Each column should have a 'start' and 'end' elements, placed respectively before and after all other column fields</li>
+</ul>
+
+<p><code>-&gt;add_field( 'col', 'fcs', 'start' )</code></p>
+
+<ul>
+<li>Text field</li>
+</ul>
+
+<p>The text field takes 3 to 4 arguments, the first one denotes the type of the field (text), the second one its unique name, the third one its heading and the foruth one an optional description.</p>
+
+<p><code>-&gt;add_field( 'text', 'css', __( 'CSS Class', 'acf_rpw' ) )</code></p>
+
+<ul>
+<li>Select field</li>
+</ul>
+
+<p>The select field takes 5 arguments, the first one denotes the type of the field (select), the second one its unique name, the third one its heading, the fourth one a description (input empty string for none) and the fifth its key -&gt; value pairs.</p>
+
+<p><code>&gt;add_field( 'select', 'ord', __( 'Order', 'acf_rpw' ), '', array( 'ASC' =&gt; __( 'Ascending', 'acf_rpw' ), 'DESC' =&gt; __( 'Descending', 'acf_rpw' ) ) )</code> </p>
+
+<p>See the source code for more information.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/gicolek/shortcode-popups/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/gicolek/shortcode-popups/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/gicolek/shortcode-popups"></a> is maintained by <a href="https://github.com/gicolek">gicolek</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
