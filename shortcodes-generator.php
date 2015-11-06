@@ -248,9 +248,7 @@ if ( current_theme_supports( 'post-formats' ) ):
 	endif;
 endif;
 
-//todo
-$test//->add_field( 'checkbox', 'ps', __( 'Post Statuses', 'acf_rpw' ), '', array_combine( get_available_post_statuses(), get_available_post_statuses() ) )
-		->add_field( 'text', 'aut', __( 'Authors', 'acf_rpw' ), __( 'Comma separated list of author ids. Ex. 1, 2, 3, 4', 'acf_rpw' ) )
+$test->add_field( 'text', 'aut', __( 'Authors', 'acf_rpw' ), __( 'Comma separated list of author ids. Ex. 1, 2, 3, 4', 'acf_rpw' ) )
 		->add_field( 'select', 'ord', __( 'Order', 'acf_rpw' ), '', array( 'ASC' => __( 'Ascending', 'acf_rpw' ), 'DESC' => __( 'Descending', 'acf_rpw' ) ) )
 		->add_field( 'select', 'orderby', __( 'Orderby', 'acf_rpw' ), __( 'If meta order is specified the next field cannot be empty.', 'acf_rpw' ), array(
 			'ID' => __( 'ID', 'acf_rpw' ),
@@ -298,7 +296,6 @@ if ( !is_wp_error( get_terms( 'category' ) ) ) {
 // obtain the categories list
 $tags = array();
 
-// TODO: what if there are no tags?
 $tags_get = get_terms( 'post_tag' );
 
 $tags = array();
