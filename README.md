@@ -1,6 +1,6 @@
 ### WordPress shortcode popups generator.
 WordPress shortcode popups generator is a PHP class, which facilitates creation of WordPress dynamic popup windows. This should help the developers out in creation of a well thught user interface for a more complex shortcodes having several fields. Generally manual management of shortcodes is quite cumbersome, our class aims to sort that issue out.
-(for a more visuall appealing version of the readme, please see [github pages](http://gicolek.github.io/shortcode-popups/) )
+(for a more visually appealing version of the readme, please see [github pages](http://gicolek.github.io/shortcode-popups/))
 
 ### Basic Usage
 
